@@ -24,6 +24,22 @@ class Navigation extends React.Component {
               Saddleback
             </a>
           </li>
+          <li>
+            <a
+              href="/swordgrass/"
+              className={`link ${this.props.active === 'swordgrass' ? 'txt-bold' : ''}`}
+            >
+              Swordgrass
+            </a>
+          </li>
+          <li>
+            <a
+              href="/cinnabar/"
+              className={`link ${this.props.active === 'cinnabar' ? 'txt-bold' : ''}`}
+            >
+              Cinnabar
+            </a>
+          </li>
         </ul>
       </div>
     );
@@ -31,7 +47,7 @@ class Navigation extends React.Component {
 }
 
 Navigation.propTypes = {
-  active: PropTypes.oneOf(['saddleback', 'flambeau'])
+  active: PropTypes.oneOf(['saddleback', 'flambeau', 'swordgrass', 'cinnabar'])
 };
 
 module.exports = Navigation;
