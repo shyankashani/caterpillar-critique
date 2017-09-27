@@ -21,6 +21,10 @@ const routes = [
   {
     path: '/swordgrass/',
     page: require('./caterpillars/swordgrass')
+  },
+  {
+    path: '/cinnabar/',
+    page: require('./caterpillars/cinnabar')
   }
 ];
 
