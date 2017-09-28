@@ -18,45 +18,47 @@ class Home extends React.Component {
           </div>
 
           <div className="flex-child-mm flex-child--grow-mm">
-            <p className="mb12">
-              This website is dedicated to the critical assessment of Nature's caterpillars.
-            </p>
-            <p className="mb12">
-              I will post a new critique every week, until I run out of caterpillars or willpower. Please enjoy!
-            </p>
             <div className="flex-parent flex-parent--wrap">
-              <span className="flex-child mr24 mb24">
-                <div className="wmax240 hmax80 mb12">
-                  <img className="hmax80" src="/assets/saddleback.jpg" alt="The Flambeau caterpillar" />
-                </div>
-                <div className="txt-h4 txt-bold">
-                  Saddleback
-                </div>
-              </span>
-              <span className="flex-child mr24 mb24">
-                <div className="wmax240 hmax80 mb12">
-                  <img className="hmax80" src="/assets/flambeau.jpg" alt="The Flambeau caterpillar" />
-                </div>
-                <div className="txt-h4 txt-bold">
-                  Flambeau
-                </div>
-              </span>
-              <span className="flex-child mr24 mb24">
-                <div className="wmax240 hmax80 mb12">
-                  <img className="hmax80" src="/assets/swordgrass.jpg" alt="The Flambeau caterpillar" />
-                </div>
-                <div className="txt-h4 txt-bold">
-                  Swordgrass
-                </div>
-              </span>
-              <span className="flex-child mr24 mb24">
-                <div className="wmax240 hmax80 mb12">
-                  <img className="hmax80" src="/assets/cinnabar.jpg" alt="The Flambeau caterpillar" />
-                </div>
-                <div className="txt-h4 txt-bold">
-                  Cinnabar
-                </div>
-              </span>
+                <span className="flex-child mr36 mb36 bg-darken5">
+                  <a href="/saddleback/">
+                    <div className="wmax180 hmax80">
+                      <img className="hmax80" src="/assets/saddleback.jpg" alt="The Flambeau caterpillar" />
+                    </div>
+                    <div className="txt-h4 txt-bold my12 mx12">
+                      Saddleback
+                    </div>
+                  </a>
+                </span>
+                <span className="flex-child mr36 mb36 bg-darken5">
+                  <a href="/flambeau/">
+                    <div className="wmax180 hmax80">
+                      <img className="hmax80" src="/assets/flambeau.jpg" alt="The Flambeau caterpillar" />
+                    </div>
+                    <div className="txt-h4 txt-bold my12 mx12">
+                      Flambeau
+                    </div>
+                  </a>
+                </span>
+                <span className="flex-child mr36 mb36 bg-darken5">
+                  <a href="/swordgrass/">
+                    <div className="wmax180 hmax80">
+                      <img className="hmax80" src="/assets/swordgrass.jpg" alt="The Flambeau caterpillar" />
+                    </div>
+                    <div className="txt-h4 txt-bold my12 mx12">
+                      Swordgrass
+                    </div>
+                  </a>
+                </span>
+                <span className="flex-child mr36 mb36 bg-darken5">
+                  <a href="/cinnabar/">
+                    <div className="wmax180 hmax80">
+                      <img className="hmax80" src="/assets/cinnabar.jpg" alt="The Flambeau caterpillar" />
+                    </div>
+                    <div className="txt-h4 txt-bold my12 mx12">
+                      Cinnabar
+                    </div>
+                  </a>
+                </span>
             </div>
           </div>
         </div>
