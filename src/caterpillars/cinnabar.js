@@ -4,6 +4,7 @@ const React = require('react');
 const Header = require('../header.js');
 const Navigation = require('../navigation');
 const Rating = require('../rating');
+const Wikipedia = require('../wikipedia');
 
 class Cinnabar extends React.Component {
   render() {
@@ -51,19 +52,8 @@ class Cinnabar extends React.Component {
               Reviewed 9/27/2017
             </div>
 
-            <a
-              href="https://en.wikipedia.org/wiki/Cinnabar_moth"
-              className="link flex-parent flex-parent--center-cross mt24"
-            >
-              <div className="flex-child">
-                <svg className="icon mr6" role="presentation">
-                  <use xlinkHref="#icon-book" />
-                </svg>
-              </div>
-              <div className="flex-child">
-                Learn more on Wikipedia
-              </div>
-            </a>
+            <Wikipedia name="Cinnabar_moth" />
+
           </div>
         </div>
       </div>
