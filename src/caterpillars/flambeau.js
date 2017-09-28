@@ -4,6 +4,7 @@ const React = require('react');
 const Header = require('../header.js');
 const Navigation = require('../navigation');
 const Rating = require('../rating');
+const Wikipedia = require('../wikipedia');
 
 class Flambeau extends React.Component {
   render() {
@@ -49,19 +50,8 @@ class Flambeau extends React.Component {
               Reviewed 5/8/2017
             </div>
 
-            <a
-              href="https://en.wikipedia.org/wiki/Dryas_iulia"
-              className="link flex-parent flex-parent--center-cross mt24"
-            >
-              <div className="flex-child">
-                <svg className="icon mr6" role="presentation">
-                  <use xlinkHref="#icon-book" />
-                </svg>
-              </div>
-              <div className="flex-child">
-                Learn more on Wikipedia
-              </div>
-            </a>
+            <Wikipedia name="Dryas_iulia" />
+
           </div>
         </div>
       </div>
