@@ -1,6 +1,7 @@
 'use strict';
 
 const React = require('react');
+const Header = require('../header.js');
 const Navigation = require('../navigation');
 const Rating = require('../rating');
 
@@ -8,13 +9,8 @@ class Swordgrass extends React.Component {
   render() {
     return (
       <div className="p24 p72-mm wmax960 mx-auto">
-        <div className="mb36 pb6 border-b border--gray-light">
-          <h1 className="txt-l txt-uppercase txt-bold txt-fancy">
-            <a href="/" className="link link--gray">
-              Caterpillar Critique
-            </a>
-          </h1>
-        </div>
+
+        <Header />
 
         <div className="flex-parent-mm">
           <div className="flex-child-mm flex-child--no-shrink-mm">
