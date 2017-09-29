@@ -4,7 +4,7 @@ const React = require('react');
 const nanorouter = require('nanorouter');
 const nanohref = require('nanohref');
 const Home = require('./home');
-const caterpillars = require('./caterpillars');
+const caterpillars = require('../data/caterpillarData');
 
 const routes = [
   {
@@ -39,8 +39,7 @@ class Router extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: null,
-      filter: null
+      page: null
     };
   }
 

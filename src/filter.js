@@ -7,6 +7,10 @@ const Rating = require('./rating');
 
 class Filter extends React.Component {
 
+  componentDidMount() {
+    console.log(this.props)
+  }
+
   render() {
     return (
       <div className="w120-mm pr24-mm mr36-mm mb24 pb72-mm">
@@ -14,14 +18,32 @@ class Filter extends React.Component {
           Rating
         </div>
         <ul>
-          <li>
-            <Rating score={3} size={'m'} />
+          <li className="mb6">
+            <label className="checkbox-container txt-s" onClick={() => this.props.setCriteria('score', 3)}>
+              <input type="checkbox" />
+              <div className="checkbox mr6 checkbox--s-label">
+                <svg className="icon"><use xlinkHref="#icon-check" /></svg>
+              </div>
+              <Rating score={3} size={'m'} />
+            </label>
           </li>
-          <li>
-            <Rating score={2} size={'m'} />
+          <li className="mb6">
+            <label className="checkbox-container txt-s">
+              <input type="checkbox" />
+              <div className="checkbox mr6 checkbox--s-label">
+                <svg className="icon"><use xlinkHref="#icon-check" /></svg>
+              </div>
+              <Rating score={2} size={'m'} />
+            </label>
           </li>
-          <li>
-            <Rating score={1} size={'m'} />
+          <li className="mb6">
+            <label className="checkbox-container txt-s">
+              <input type="checkbox" />
+              <div className="checkbox mr6 checkbox--s-label">
+                <svg className="icon"><use xlinkHref="#icon-check" /></svg>
+              </div>
+              <Rating score={1} size={'m'} />
+            </label>
           </li>
         </ul>
         <div className="mb12 mt36 txt-bold color-darken50 txt-uppercase txt-s">
@@ -29,7 +51,7 @@ class Filter extends React.Component {
         </div>
         <ul>
           <li className="mb6">
-            <label className="checkbox-container txt-s" htmlFor="Americas" onClick={() => console.log(ReactDOM.findDOMNode(this.refs["saddleback"]))}>
+            <label className="checkbox-container txt-s" htmlFor="Americas">
               <input type="checkbox" id="Americas" />
               <div className="checkbox mr6 checkbox--s-label">
                 <svg className="icon"><use xlinkHref="#icon-check" /></svg>

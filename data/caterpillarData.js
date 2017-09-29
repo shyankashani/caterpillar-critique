@@ -1,4 +1,4 @@
-const caterpillars = {
+const caterpillarData = {
 
   'saddleback': {
     name: {
@@ -54,4 +54,4 @@ const caterpillars = {
 
 }
 
-module.exports = caterpillars
+module.exports = caterpillarData;
