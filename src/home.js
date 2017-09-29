@@ -21,8 +21,8 @@ class Home extends React.Component {
 
           <div className="flex-child-mm flex-child--grow-mm">
             <div className="flex-parent flex-parent--wrap">
-              {this.props.info.map(caterpillar => {
-                return <Card info={caterpillar} key={caterpillar.commonName} />
+              {this.props.caterpillars.map(caterpillar => {
+                return <Card caterpillar={caterpillar} key={caterpillar.name.common} />
               })}
             </div>
           </div>
