@@ -1,6 +1,6 @@
 const caterpillars = {
   'saddleback': {
-    commonName: 'Saddleback',
+    commonName: 'saddleback',
     scientificName: 'acharia stimulea',
     wikipediaName: 'Saddleback_caterpillar',
     rating: 3,
@@ -8,14 +8,14 @@ const caterpillars = {
     date: '5/1/2017'
   },
   'flambeau': {
-    commonName: 'Flambeau',
+    commonName: 'flambeau',
     scientificName: 'dryas iulia',
     wikipediaName: 'Dryas_iulia',
     rating: 2,
     review: 'This caterpillar looks like a pine forest recently charred in a wildfire. I admire the Flambeau, but prefer to do so from afar. If I were a bird, I would not try to eat this caterpillar. The Flambeau appeals to something vague but powerful within me; I am not sure what.'
   },
   'swordgrass': {
-    commonName: 'Swordgrass',
+    commonName: 'swordgrass',
     scientificName: 'xylena exsoleta',
     wikipediaName: 'Saddleback_caterpillar',
     rating: 3,
@@ -23,7 +23,7 @@ const caterpillars = {
     date: '5/1/2017'
   },
   'cinnabar': {
-    commonName: 'Cinnabar',
+    commonName: 'cinnabar',
     scientificName: 'tyria jacobaeae',
     wikipediaName: 'Cinnabar_moth',
     rating: 1,
@@ -32,4 +32,4 @@ const caterpillars = {
   },
 }
 
-module.exports = caterpillars;
+module.exports = caterpillars

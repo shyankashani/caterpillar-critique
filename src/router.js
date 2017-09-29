@@ -48,7 +48,7 @@ class Router extends React.Component {
     routes.forEach(route => {
       router.on(route.path, () => {
         route.path === '/'
-        ? this.setState({page: <route.page info={caterpillars} />})
+        ? this.setState({page: <route.page info={Object.values(caterpillars)} />})
         : this.setState({page: <route.page info={caterpillars[route.path.slice(1, route.path.length-1)]} />});
       });
     });
