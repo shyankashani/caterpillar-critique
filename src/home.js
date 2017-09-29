@@ -2,6 +2,7 @@
 
 const React = require('react');
 const Header = require('./header');
+const Filter = require('./filter');
 const Navigation = require('./navigation');
 
 class Home extends React.Component {
@@ -14,12 +15,12 @@ class Home extends React.Component {
         <div className="flex-parent-mm">
 
           <div className="flex-child-mm flex-child--no-shrink-mm">
-            <Navigation />
+            <Filter />
           </div>
 
           <div className="flex-child-mm flex-child--grow-mm">
             <div className="flex-parent flex-parent--wrap">
-                <span className="flex-child mr36 mb36 bg-darken5">
+                <span className="flex-child mr36 mb36 bg-darken5" ref="saddleback">
                   <a href="/saddleback/">
                     <div className="wmax180 hmax80">
                       <img className="hmax80" src="/assets/saddleback.jpg" alt="The Flambeau caterpillar" />

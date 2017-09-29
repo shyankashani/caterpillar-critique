@@ -33,7 +33,7 @@ class Flambeau extends React.Component {
             </div>
 
             <div className="my24">
-              <Rating score={2} />
+              <Rating score={2} size={'l'} />
             </div>
 
             <p className="mb12">

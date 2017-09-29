@@ -33,7 +33,7 @@ class Swordgrass extends React.Component {
             </div>
 
             <div className="my24">
-              <Rating score={3} />
+              <Rating score={3} size={'l'} />
             </div>
 
             <p className="mb12">

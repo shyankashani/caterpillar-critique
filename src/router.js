@@ -38,7 +38,8 @@ class Router extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: null
+      page: null,
+      filter: null
     };
   }
 

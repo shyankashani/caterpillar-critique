@@ -10,7 +10,7 @@ class Rating extends React.Component {
       const starColor = i <= this.props.score ? 'yellow' : 'gray-light';
       stars.push(
         <div className="flex-child" key={i}>
-          <svg className={`icon icon--l mr6 color-${starColor}`} role="presentation">
+          <svg className={`icon icon--${this.props.size} mr6 color-${starColor}`} role="presentation">
             <use xlinkHref="#icon-star" />
           </svg>
         </div>
@@ -26,7 +26,8 @@ class Rating extends React.Component {
 }
 
 Rating.propTypes = {
-  score: PropTypes.oneOf([1, 2, 3]).isRequired
+  score: PropTypes.oneOf([1, 2, 3]).isRequired,
+  size: PropTypes.oneOf(['s', 'm', 'l']).isRequired
 };
 
 module.exports = Rating;
