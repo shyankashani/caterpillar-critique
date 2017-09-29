@@ -1,10 +1,10 @@
 'use strict';
 
 const React = require('react');
-const Header = require('../header.js');
-const Navigation = require('../navigation');
-const Rating = require('../rating');
-const Wikipedia = require('../wikipedia');
+const Header = require('./header.js');
+const Navigation = require('./navigation');
+const Rating = require('./rating');
+const Wikipedia = require('./wikipedia');
 
 class Saddleback extends React.Component {
   render() {
@@ -21,10 +21,10 @@ class Saddleback extends React.Component {
           <div className="flex-child-mm flex-child--grow-mm">
             <h2 className="mb36">
               <div className="txt-h2 txt-bold inline-block">
-                Saddleback
+                {this.props.info.commonName}
               </div>
               <div className="ml24 inline-block txt-em txt-bold txt-m color-gray ">
-                acharia stimulea
+                {this.props.info.scientificName}
               </div>
             </h2>
 
@@ -37,22 +37,14 @@ class Saddleback extends React.Component {
             </div>
 
             <p className="mb12">
-              The Saddleback displays a wonderful range of colors and textures, all of them appealing. Although the moth is native to eastern North America, it has a distinctively southwestern vibe.
-            </p>
-
-            <p className="mb12">
-              The design on this caterpillar's back would make a beautiful bedspread.
-            </p>
-
-            <p className="mb12">
-              I long to ride this caterpillar in a parade.
+              {this.props.info.review}
             </p>
 
             <div className="txt-em txt-s color-gray">
-              Reviewed 5/1/2017
+              Reviewed {this.props.info.date}
             </div>
 
-            <Wikipedia name="Saddleback_caterpillar" />
+            <Wikipedia name={this.props.info.wikipediaName} />
 
           </div>
         </div>

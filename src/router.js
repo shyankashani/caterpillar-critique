@@ -4,6 +4,7 @@ const React = require('react');
 const nanorouter = require('nanorouter');
 const nanohref = require('nanohref');
 const Home = require('./home');
+const caterpillars = require('./caterpillars');
 
 const routes = [
   {
@@ -12,19 +13,19 @@ const routes = [
   },
   {
     path: '/saddleback/',
-    page: require('./caterpillars/saddleback')
+    page: require('./review')
   },
   {
     path: '/flambeau/',
-    page: require('./caterpillars/flambeau')
+    page: require('./review')
   },
   {
     path: '/swordgrass/',
-    page: require('./caterpillars/swordgrass')
+    page: require('./review')
   },
   {
     path: '/cinnabar/',
-    page: require('./caterpillars/cinnabar')
+    page: require('./review')
   }
 ];
 
@@ -46,7 +47,9 @@ class Router extends React.Component {
   componentDidMount() {
     routes.forEach(route => {
       router.on(route.path, () => {
-        this.setState({ page: <route.page /> });
+        route.path === '/'
+        ? this.setState({page: <route.page info={caterpillars} />})
+        : this.setState({page: <route.page info={caterpillars[route.path.slice(1, route.path.length-1)]} />});
       });
     });
 
