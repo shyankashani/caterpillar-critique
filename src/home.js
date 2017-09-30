@@ -2,7 +2,7 @@
 
 const React = require('react');
 const Header = require('./header');
-const Filter = require('./filter');
+const Sidebar = require('./sidebar');
 const Navigation = require('./navigation');
 const Card = require('./card');
 
@@ -12,16 +12,35 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      criteria: {
-        test: caterpillar => true
-      }
+      features: {},
+      criteria: {}
     }
   }
 
-  toggleCriteria(e) {
+  componentDidMount() {
+    let nextFeatures = {};
+    this.props.caterpillars.forEach(caterpillar => {
+      for (let feature in caterpillar.features) {
+        if (nextFeatures.hasOwnProperty(feature)) {
+          nextFeatures[feature].add(caterpillar.features[feature])
+        } else {
+          nextFeatures[feature] = new Set([caterpillar.features[feature]])
+        }
+      }
+    })
+    this.setState({ features: nextFeatures })
+  }
+
+  toggleCriteria(criteriaName, feature, value) {
     this.setState(prevState => {
-      if (prevState.criteria.hasOwnProperty('test')) {
-        console.log('test')
+      if (prevState.criteria.hasOwnProperty(criteriaName)) {
+        let nextCriteria = prevState.criteria;
+        delete nextCriteria[criteriaName];
+        return { criteria: nextCriteria };
+      } else {
+        let newCriteria = {};
+        newCriteria[criteriaName] = caterpillar => caterpillar.features[feature] === value;
+        return { criteria: Object.assign(prevState.criteria, newCriteria) }
       }
     })
   }
@@ -35,7 +54,7 @@ class Home extends React.Component {
         <div className="flex-parent-mm">
 
           <div className="flex-child-mm flex-child--no-shrink-mm">
-            <Filter toggleCriteria={this.toggleCriteria.bind(this)} />
+            <Sidebar features={this.state.features} toggleCriteria={this.toggleCriteria.bind(this)} />
           </div>
 
           <div className="flex-child-mm flex-child--grow-mm">
