@@ -13,7 +13,7 @@ class Value extends React.Component {
         <label className="checkbox-container txt-s">
           <input
             type="checkbox"
-            onChange={() => this.props.toggleCriteria('test', this.props.feature, this.props.value)}
+            onChange={() => this.props.toggleCriteria(`${this.props.feature+this.props.value}`, this.props.feature, this.props.value)}
           />
           <div className="checkbox mr6 checkbox--s-label">
             <svg className="icon"><use xlinkHref="#icon-check" /></svg>
