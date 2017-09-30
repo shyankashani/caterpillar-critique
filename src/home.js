@@ -12,17 +12,17 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      criteria: [caterpillar => true]
+      criteria: {
+        test: caterpillar => true
+      }
     }
   }
 
-  componentDidMount() {
-    console.log(this.state);
-  }
-
-  setCriteria(property, value) {
+  toggleCriteria(e) {
     this.setState(prevState => {
-      criteria: prevState.criteria.push(caterpillar => caterpillar[property] === value)
+      if (prevState.criteria.hasOwnProperty('test')) {
+        console.log('test')
+      }
     })
   }
 
@@ -35,13 +35,13 @@ class Home extends React.Component {
         <div className="flex-parent-mm">
 
           <div className="flex-child-mm flex-child--no-shrink-mm">
-            <Filter setCriteria={this.setCriteria.bind(this)} />
+            <Filter toggleCriteria={this.toggleCriteria.bind(this)} />
           </div>
 
           <div className="flex-child-mm flex-child--grow-mm">
             <div className="flex-parent flex-parent--wrap">
               {this.props.caterpillars.filter(caterpillar =>
-                this.state.criteria.every(criterion =>
+                Object.values(this.state.criteria).every(criterion =>
                   criterion(caterpillar))).map(caterpillar =>
                     <Card caterpillar={caterpillar} key={caterpillar.name.common} />
               )}

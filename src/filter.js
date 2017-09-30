@@ -7,10 +7,6 @@ const Rating = require('./rating');
 
 class Filter extends React.Component {
 
-  componentDidMount() {
-    console.log(this.props)
-  }
-
   render() {
     return (
       <div className="w120-mm pr24-mm mr36-mm mb24 pb72-mm">
@@ -19,8 +15,8 @@ class Filter extends React.Component {
         </div>
         <ul>
           <li className="mb6">
-            <label className="checkbox-container txt-s" onClick={() => this.props.setCriteria('score', 3)}>
-              <input type="checkbox" />
+            <label className="checkbox-container txt-s">
+              <input type="checkbox" onChange={this.props.toggleCriteria} />
               <div className="checkbox mr6 checkbox--s-label">
                 <svg className="icon"><use xlinkHref="#icon-check" /></svg>
               </div>
