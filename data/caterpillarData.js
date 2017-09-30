@@ -7,7 +7,8 @@ const caterpillarData = {
       scientific: 'Acharia stimulea'
     },
     features: {
-      origin: 'America'
+      origin: 'America',
+      size: 'Large'
     },
     link: 'https://en.wikipedia.org/wiki/Saddleback_caterpillar',
     image: '/assets/saddleback.jpg',
@@ -22,7 +23,8 @@ const caterpillarData = {
       scientific: 'Dryas iulia'
     },
     features: {
-      origin: 'Africa'
+      origin: 'Africa',
+      size: 'Medium'
     },
     link: 'https://en.wikipedia.org/wiki/Dryas_iulia',
     image: '/assets/flambeau.jpg',
@@ -37,7 +39,8 @@ const caterpillarData = {
       scientific: 'Xylena exsoleta'
     },
     features: {
-      origin: 'Africa'
+      origin: 'Africa',
+      size: 'Large'
     },
     link: 'https://en.wikipedia.org/wiki/Saddleback_caterpillar',
     image: '/assets/swordgrass.jpg',
@@ -52,7 +55,8 @@ const caterpillarData = {
       scientific: 'Tyria jacobaeae'
     },
     features: {
-      origin: 'Europe'
+      origin: 'Europe',
+      size: 'Small'
     },
     link: 'https://en.wikipedia.org/wiki/Cinnabar_moth',
     image: '/assets/cinnabar.jpg',

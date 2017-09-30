@@ -10,7 +10,7 @@ class Filter extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="mt36">
         <div className="mb12 txt-bold color-darken50 txt-uppercase txt-s">
           {this.props.feature.name}
         </div>
