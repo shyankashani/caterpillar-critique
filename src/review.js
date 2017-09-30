@@ -32,7 +32,7 @@ class Saddleback extends React.Component {
             </div>
 
             <div className="my24">
-              <Rating score={this.props.caterpillar.score} size={'l'} />
+              <Rating score={this.props.caterpillar.features.score} size={'l'} />
             </div>
 
             <p className="mb12">
