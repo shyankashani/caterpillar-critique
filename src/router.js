@@ -4,30 +4,22 @@ const React = require('react');
 const nanorouter = require('nanorouter');
 const nanohref = require('nanohref');
 const Home = require('./home');
-const caterpillars = require('../data/caterpillarData');
+
+const caterpillars = require('../data/mockData');
 
 const routes = [
   {
     path: '/',
     page: require('./home')
-  },
-  {
-    path: '/saddleback/',
-    page: require('./review')
-  },
-  {
-    path: '/flambeau/',
-    page: require('./review')
-  },
-  {
-    path: '/swordgrass/',
-    page: require('./review')
-  },
-  {
-    path: '/cinnabar/',
+  }
+]
+
+routes.splice(1, 0, ...Object.values(caterpillars).map(caterpillar => {
+  return {
+    path: `/${caterpillar.name.common}/`,
     page: require('./review')
   }
-];
+}))
 
 function isRoute(path) {
   return routes.some(route => route.path === path);
@@ -44,6 +36,7 @@ class Router extends React.Component {
   }
 
   componentDidMount() {
+    console.log(caterpillars);
     routes.forEach(route => {
       router.on(route.path, () => {
         this.setState(() => {
