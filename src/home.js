@@ -13,7 +13,7 @@ class Home extends React.Component {
     super(props);
     this.state = {
       features: {},
-      criteria: {}
+      criteria: { search: caterpillar => caterpillar.names.common.includes('')}
     }
   }
 
@@ -39,9 +39,17 @@ class Home extends React.Component {
         return { criteria: nextCriteria };
       } else {
         let newCriteria = {};
-        newCriteria[criteriaName] = caterpillar => caterpillar.features[feature] === value;
+        newCriteria[criteriaName] = caterpillar => caterpillar.features[feature].includes(value);
         return { criteria: Object.assign(prevState.criteria, newCriteria) }
       }
+    })
+  }
+
+  searchCriteria(query) {
+    this.setState(prevState => {
+      let nextCriteria = prevState.criteria;
+      nextCriteria.search = caterpillar => caterpillar.names.common.includes(query);
+      return { criteria: nextCriteria };
     })
   }
 
@@ -54,7 +62,11 @@ class Home extends React.Component {
         <div className="flex-parent-mm">
 
           <div className="flex-child-mm flex-child--no-shrink-mm">
-            <Sidebar features={this.state.features} toggleCriteria={this.toggleCriteria.bind(this)} />
+            <Sidebar
+              features={this.state.features}
+              toggleCriteria={this.toggleCriteria.bind(this)}
+              searchCriteria={this.searchCriteria.bind(this)}
+            />
           </div>
 
           <div className="flex-child-mm flex-child--grow-mm">

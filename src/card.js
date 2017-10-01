@@ -10,7 +10,7 @@ class Card extends React.Component {
           <div className="wmax180 hmax80">
             <img className="hmax80" src={this.props.caterpillar.image} alt={`The ${this.props.caterpillar.names.common} caterpillar`} />
           </div>
-          <div className="txt-h4 txt-bold my12 mx12">
+          <div className="txt-s txt-bold my12 mx12 .txt-truncate">
             {this.props.caterpillar.names.common}
           </div>
         </a>
