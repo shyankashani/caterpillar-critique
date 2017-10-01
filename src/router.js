@@ -3,21 +3,23 @@
 const React = require('react');
 const nanorouter = require('nanorouter');
 const nanohref = require('nanohref');
-const Home = require('./home');
-
-const caterpillars = require('../data/mockData');
+const caterpillars = require('../data/newMockData');
 
 const routes = [
   {
     path: '/',
-    page: require('./home')
+    page: require('./home'),
+    index: null
   }
 ]
 
-routes.splice(1, 0, ...Object.values(caterpillars).map(caterpillar => {
+let i = 0;
+
+routes.splice(0, 0, ...caterpillars.map(caterpillar => {
   return {
-    path: `/${caterpillar.name.common}/`,
-    page: require('./review')
+    path: `/${caterpillar.names.common.replace(/\s/g,'')}/`,
+    page: require('./review'),
+    index: i++
   }
 }))
 
@@ -36,14 +38,13 @@ class Router extends React.Component {
   }
 
   componentDidMount() {
-    console.log(caterpillars);
     routes.forEach(route => {
       router.on(route.path, () => {
         this.setState(() => {
           if (route.path === '/') {
-            return { page: <route.page caterpillars={Object.values(caterpillars)} /> };
+            return { page: <route.page caterpillars={caterpillars} /> };
           } else {
-            return { page: <route.page caterpillar={caterpillars[route.path.slice(1, route.path.length-1)]} /> };
+            return { page: <route.page caterpillar={caterpillars[route.index]} /> };
           }
         });
       });

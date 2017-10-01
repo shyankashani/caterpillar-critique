@@ -62,7 +62,7 @@ class Home extends React.Component {
               {this.props.caterpillars.filter(caterpillar =>
                 Object.values(this.state.criteria).every(criterion =>
                   criterion(caterpillar))).map(caterpillar =>
-                    <Card caterpillar={caterpillar} key={caterpillar.name.common} />
+                    <Card caterpillar={caterpillar} key={caterpillar.names.common} />
               )}
             </div>
           </div>

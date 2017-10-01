@@ -14,13 +14,13 @@ class Saddleback extends React.Component {
 
         <div className="flex-parent-mm">
           <div className="flex-child-mm flex-child--no-shrink-mm">
-            <Navigation active={this.props.caterpillar.name.common} />
+            <Navigation active={this.props.caterpillar.names.common} />
           </div>
 
           <div className="flex-child-mm flex-child--grow-mm">
             <h2 className="mb36">
               <div className="txt-h2 txt-bold inline-block">
-                {this.props.caterpillar.name.proper}
+                {this.props.caterpillar.names.common}
               </div>
               <div className="ml24 inline-block txt-em txt-bold txt-m color-gray ">
                 {this.props.caterpillar.scientific}
@@ -28,7 +28,7 @@ class Saddleback extends React.Component {
             </h2>
 
             <div className="wmax480">
-              <img src={this.props.caterpillar.image} alt={`The ${this.props.caterpillar.name.proper} caterpillar`} />
+              <img src={this.props.caterpillar.image} alt={`The ${this.props.caterpillar.names.common} caterpillar`} />
             </div>
 
             <div className="my24">
