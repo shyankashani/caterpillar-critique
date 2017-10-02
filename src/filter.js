@@ -15,13 +15,13 @@ class Filter extends React.Component {
     );
 
     return (
-      <div className="mt36">
+      <div className="mb30">
         <div className="mb12 txt-bold color-darken50 txt-uppercase txt-s">
           {this.props.feature.name}
         </div>
-        <ul>
+        <div className="grid grid--gut24">
           {values}
-        </ul>
+        </div>
       </div>
     );
   }

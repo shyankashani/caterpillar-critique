@@ -15,8 +15,9 @@ class Sidebar extends React.Component {
   render() {
     return (
       <div className="w120-mm pr24-mm mr36-mm mb24 pb72-mm">
-        <input type="search" className="input input--s txt-s" placeholder="Search"
-          onChange={this.handleChange.bind(this)} />
+        <div className="border-b pb3 border--gray-light mb24">
+          <input type="search" className="input input--s txt-s txt-bold pl0 unround border--0 color-gray-dark txt-uppercase" placeholder="Search" onChange={this.handleChange.bind(this)} />
+        </div>
         <div>
           {Object.keys(this.props.features).map(feature =>
             <Filter

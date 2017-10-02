@@ -16,18 +16,18 @@ class Value extends React.Component {
     }
 
     return (
-      <li className="mb6">
+      <div className="col col--auto col--12-mm mb6-mm">
         <label className="checkbox-container txt-s">
           <input
             type="checkbox"
             onChange={() => this.props.toggleCriteria(`${this.props.feature+this.props.value}`, this.props.feature, this.props.value)}
           />
-          <div className="checkbox mr6 checkbox--s-label">
-            <svg className="icon"><use xlinkHref="#icon-check" /></svg>
+        <div className="checkbox mr6 checkbox--s-label">
+            <svg className="icon icon--xs icon-inliner"><use xlinkHref="#icon-check" /></svg>
           </div>
           {value}
         </label>
-      </li>
+      </div>
     );
   }
 }

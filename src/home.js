@@ -67,7 +67,7 @@ class Home extends React.Component {
             />
           </div>
           <div className="flex-child-mm flex-child--grow-mm">
-            <div className="txt-s grid py12 grid--gut36 align-middle txt-bold border--gray-faint">
+            <div className="txt-s grid pb6 pt3 grid--gut36 align-middle txt-bold">
               <div className="col col--2">
               </div>
               <div className="col col--3 txt-capitalize-first">
