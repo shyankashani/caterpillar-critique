@@ -29,7 +29,7 @@ class Sidebar extends React.Component {
           <input
             type="search"
             className="input input--s txt-s txt-bold pl0 border--0 txt-uppercase"
-            placeholder="Search"
+            placeholder="Search Name"
             onChange={this.handleSearch.bind(this)}
           />
         </div>

@@ -49,7 +49,7 @@ class Home extends React.Component {
   searchCriteria(query) {
     this.setState(prevState => {
       let nextCriteria = prevState.criteria;
-      nextCriteria.search = caterpillar => caterpillar.names.common.includes(query);
+      nextCriteria.search = caterpillar => caterpillar.names.common.toLowerCase().includes(query.toLowerCase());
       return { criteria: nextCriteria };
     })
   }
