@@ -14,7 +14,16 @@ class Saddleback extends React.Component {
 
         <div className="flex-parent-mm">
           <div className="flex-child-mm flex-child--no-shrink-mm">
-            <Navigation active={this.props.caterpillar.names.common} />
+            <a href="/" className="link link--gray txt-s txt-bold txt-uppercase">
+              <div className="w120-mm pr24-mm mr36-mm mb24 pb72-mm flex-parent mt3">
+                <span className="icon-inliner">
+                  <svg className="icon icon--xs">
+                    <use xlinkHref="#icon-chevron-left" />
+                  </svg>
+                </span>
+                Back
+              </div>
+            </a>
           </div>
 
           <div className="flex-child-mm flex-child--grow-mm">

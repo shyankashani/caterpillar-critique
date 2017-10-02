@@ -3,7 +3,7 @@
 const React = require('react');
 const nanorouter = require('nanorouter');
 const nanohref = require('nanohref');
-const caterpillars = require('../data/caterpillarData');
+const caterpillars = require('../data/newMockData');
 
 const routes = [
   {
@@ -40,13 +40,11 @@ class Router extends React.Component {
   componentDidMount() {
     routes.forEach(route => {
       router.on(route.path, () => {
-        this.setState(() => {
-          if (route.path === '/') {
-            return { page: <route.page caterpillars={caterpillars} /> };
-          } else {
-            return { page: <route.page caterpillar={caterpillars[route.index]} /> };
-          }
-        });
+        this.setState(() =>
+          route.path === '/'
+          ? { page: <route.page caterpillars={caterpillars} /> }
+          : { page: <route.page caterpillar={caterpillars[route.index]} /> }
+        );
       });
     });
 
