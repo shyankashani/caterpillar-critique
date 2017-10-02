@@ -19,7 +19,7 @@ class Item extends React.Component {
             </div>
 
             <div className="col col--3">
-              <Rating score={this.props.caterpillar.features.rating} />
+              <Rating score={this.props.caterpillar.features.rating} size="m"/>
             </div>
         </div>
       </a>

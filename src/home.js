@@ -55,6 +55,14 @@ class Home extends React.Component {
   }
 
   render() {
+
+    let i = 0;
+    const list = this.props.caterpillars.filter(caterpillar =>
+      Object.values(this.state.criteria).every(criterion =>
+        criterion(caterpillar))).map(caterpillar =>
+          <Item caterpillar={caterpillar} key={i++} />
+    )
+
     return (
       <div className="p24 p72-mm wmax960 mx-auto">
         <Header />
@@ -76,16 +84,11 @@ class Home extends React.Component {
               <div className="col col--4">
                 Scientific name
               </div>
-
               <div className="col col--3">
                 Rating
               </div>
             </div>
-            {this.props.caterpillars.filter(caterpillar =>
-              Object.values(this.state.criteria).every(criterion =>
-                criterion(caterpillar))).map(caterpillar =>
-                  <Item caterpillar={caterpillar} key={caterpillar.names.common} />
-            )}
+            {list}
           </div>
         </div>
       </div>
