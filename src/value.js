@@ -8,12 +8,12 @@ const Rating = require('./rating');
 class Value extends React.Component {
 
   handleToggle() {
-    this.props.toggleCriteria(`${this.props.name+this.props.value}`, this.props.name, this.props.value);
+    this.props.toggleCriteria(this.props.name, this.props.value);
   }
 
   render() {
     const value = this.props.name === 'rating'
-      ? <Rating score={this.props.value} size="m" /> 
+      ? <Rating score={this.props.value} size="m" />
         : this.props.value
 
     return (

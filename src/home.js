@@ -14,7 +14,7 @@ class Home extends React.Component {
     super(props);
     this.state = {
       features: {},
-      criteria: { search: caterpillar => caterpillar.names.common.includes('')}
+      criteria: { search: caterpillar => caterpillar.names.common.includes('') }
     }
   }
 
@@ -32,11 +32,11 @@ class Home extends React.Component {
     this.setState({ features: nextFeatures })
   }
 
-  toggleCriteria(criteriaName, feature, value) {
+  toggleCriteria(feature, value) {
     this.setState(prevState => {
-      if (prevState.criteria.hasOwnProperty(criteriaName)) {
+      if (prevState.criteria[feature] && prevState.criteria[feature].hasOwnProperty(value)) {
         let nextCriteria = prevState.criteria;
-        delete nextCriteria[criteriaName];
+        delete nextCriteria[feature][value];
         return { criteria: nextCriteria };
       } else {
         let newCriteria = {};

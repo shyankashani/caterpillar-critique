@@ -17,7 +17,6 @@ class Item extends React.Component {
             <div className="col col--4">
               {this.props.caterpillar.names.scientific}
             </div>
-
             <div className="col col--3">
               <Rating score={this.props.caterpillar.features.rating} size="m"/>
             </div>

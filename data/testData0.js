@@ -3,7 +3,6 @@ const caterpillarData = [
   {
     names: {
       common: 'saddleback',
-      proper: 'Saddleback',
       scientific: 'Acharia stimulea'
     },
     features: {
