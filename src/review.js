@@ -14,13 +14,22 @@ class Saddleback extends React.Component {
 
         <div className="flex-parent-mm">
           <div className="flex-child-mm flex-child--no-shrink-mm">
-            <Navigation active={this.props.caterpillar.name.common} />
+            <a href="/" className="link link--gray txt-s txt-bold txt-uppercase">
+              <div className="w120-mm pr24-mm mr36-mm mb24 pb72-mm flex-parent mt3">
+                <span className="icon-inliner">
+                  <svg className="icon icon--xs">
+                    <use xlinkHref="#icon-chevron-left" />
+                  </svg>
+                </span>
+                Back
+              </div>
+            </a>
           </div>
 
           <div className="flex-child-mm flex-child--grow-mm">
             <h2 className="mb36">
-              <div className="txt-h2 txt-bold inline-block">
-                {this.props.caterpillar.name.proper}
+              <div className="txt-h2 txt-bold inline-block txt-capitalize-first">
+                {this.props.caterpillar.names.common}
               </div>
               <div className="ml24 inline-block txt-em txt-bold txt-m color-gray ">
                 {this.props.caterpillar.scientific}
@@ -28,14 +37,14 @@ class Saddleback extends React.Component {
             </h2>
 
             <div className="wmax480">
-              <img src={this.props.caterpillar.image} alt={`The ${this.props.caterpillar.name.proper} caterpillar`} />
+              <img src={this.props.caterpillar.image} alt={`The ${this.props.caterpillar.names.common} caterpillar`} />
             </div>
 
             <div className="my24">
-              <Rating score={this.props.caterpillar.features.score} size={'l'} />
+              <Rating score={this.props.caterpillar.features.rating} size={'l'} />
             </div>
 
-            <p className="mb12">
+            <p className="mb12 prose">
               {this.props.caterpillar.review}
             </p>
 

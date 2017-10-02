@@ -7,20 +7,27 @@ const Rating = require('./rating');
 
 class Value extends React.Component {
 
+  handleToggle() {
+    this.props.toggleCriteria(`${this.props.name+this.props.value}`, this.props.name, this.props.value);
+  }
+
   render() {
+    const value = this.props.name === 'rating'
+      ? <Rating score={this.props.value} size="m" /> 
+        : this.props.value
+
     return (
-      <li className="mb6">
+      <div className="col col--auto col--12-mm mb6-mm">
         <label className="checkbox-container txt-s">
-          <input
-            type="checkbox"
-            onChange={() => this.props.toggleCriteria(`${this.props.feature+this.props.value}`, this.props.feature, this.props.value)}
-          />
+          <input type="checkbox" onChange={this.handleToggle.bind(this)} />
           <div className="checkbox mr6 checkbox--s-label">
-            <svg className="icon"><use xlinkHref="#icon-check" /></svg>
+            <svg className="icon icon--xs icon-inliner">
+              <use xlinkHref="#icon-check" />
+            </svg>
           </div>
-          {this.props.value}
+          {value}
         </label>
-      </li>
+      </div>
     );
   }
 }
