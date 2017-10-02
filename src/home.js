@@ -67,16 +67,16 @@ class Home extends React.Component {
             />
           </div>
           <div className="flex-child-mm flex-child--grow-mm">
-            <div className="txt-s grid py12 grid--gut24 align-middle txt-bold border--gray-faint">
+            <div className="txt-s grid py12 grid--gut36 align-middle txt-bold border--gray-faint">
+              <div className="col col--2">
+              </div>
               <div className="col col--3 txt-capitalize-first">
                 Common name
               </div>
               <div className="col col--4">
                 Scientific name
               </div>
-              <div className="col col--2">
-                Origin
-              </div>
+
               <div className="col col--3">
                 Rating
               </div>
