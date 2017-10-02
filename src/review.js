@@ -19,7 +19,7 @@ class Saddleback extends React.Component {
 
           <div className="flex-child-mm flex-child--grow-mm">
             <h2 className="mb36">
-              <div className="txt-h2 txt-bold inline-block">
+              <div className="txt-h2 txt-bold inline-block txt-capitalize-first">
                 {this.props.caterpillar.names.common}
               </div>
               <div className="ml24 inline-block txt-em txt-bold txt-m color-gray ">

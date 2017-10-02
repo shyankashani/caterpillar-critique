@@ -5,6 +5,7 @@ const Header = require('./header');
 const Sidebar = require('./sidebar');
 const Navigation = require('./navigation');
 const Card = require('./card');
+const Item = require('./item');
 
 class Home extends React.Component {
 
@@ -56,11 +57,8 @@ class Home extends React.Component {
   render() {
     return (
       <div className="p24 p72-mm wmax960 mx-auto">
-
         <Header />
-
         <div className="flex-parent-mm">
-
           <div className="flex-child-mm flex-child--no-shrink-mm">
             <Sidebar
               features={this.state.features}
@@ -68,15 +66,26 @@ class Home extends React.Component {
               searchCriteria={this.searchCriteria.bind(this)}
             />
           </div>
-
           <div className="flex-child-mm flex-child--grow-mm">
-            <div className="flex-parent flex-parent--wrap">
-              {this.props.caterpillars.filter(caterpillar =>
-                Object.values(this.state.criteria).every(criterion =>
-                  criterion(caterpillar))).map(caterpillar =>
-                    <Card caterpillar={caterpillar} key={caterpillar.names.common} />
-              )}
+            <div className="txt-s grid py12 grid--gut24 align-middle txt-bold border--gray-faint">
+              <div className="col col--3 txt-capitalize-first">
+                Common name
+              </div>
+              <div className="col col--4">
+                Scientific name
+              </div>
+              <div className="col col--2">
+                Origin
+              </div>
+              <div className="col col--3">
+                Rating
+              </div>
             </div>
+            {this.props.caterpillars.filter(caterpillar =>
+              Object.values(this.state.criteria).every(criterion =>
+                criterion(caterpillar))).map(caterpillar =>
+                  <Item caterpillar={caterpillar} key={caterpillar.names.common} />
+            )}
           </div>
         </div>
       </div>
