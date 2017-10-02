@@ -3,7 +3,7 @@
 const React = require('react');
 const nanorouter = require('nanorouter');
 const nanohref = require('nanohref');
-const caterpillars = require('../data/newMockData');
+const caterpillars = require('../data/caterpillarData');
 
 const routes = [
   {

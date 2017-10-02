@@ -39,7 +39,7 @@ class Home extends React.Component {
         return { criteria: nextCriteria };
       } else {
         let newCriteria = {};
-        newCriteria[criteriaName] = caterpillar => caterpillar.features[feature].includes(value);
+        newCriteria[criteriaName] = caterpillar => caterpillar.features[feature] === value;
         return { criteria: Object.assign(prevState.criteria, newCriteria) }
       }
     })

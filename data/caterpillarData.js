@@ -1,12 +1,13 @@
-const caterpillarData = {
+const caterpillarData = [
 
-  'saddleback': {
-    name: {
+  {
+    names: {
       common: 'saddleback',
       proper: 'Saddleback',
       scientific: 'Acharia stimulea'
     },
     features: {
+      rating: 1,
       origin: 'America',
       size: 'Large'
     },
@@ -16,13 +17,14 @@ const caterpillarData = {
     date: '5/1/2017'
   },
 
-  'flambeau': {
-    name: {
+  {
+    names: {
       common: 'flambeau',
       proper: 'Flambeau',
       scientific: 'Dryas iulia'
     },
     features: {
+      rating: 1,
       origin: 'Africa',
       size: 'Medium'
     },
@@ -32,13 +34,14 @@ const caterpillarData = {
     date: '5/1/2017'
   },
 
-  'swordgrass': {
-    name: {
+  {
+    names: {
       common: 'swordgrass',
       proper: 'Swordgrass',
       scientific: 'Xylena exsoleta'
     },
     features: {
+      rating: 2,
       origin: 'Africa',
       size: 'Large'
     },
@@ -48,22 +51,23 @@ const caterpillarData = {
     date: '5/1/2017'
   },
 
-  'cinnabar': {
-    name: {
+  {
+    names: {
       common: 'cinnabar',
       proper: 'Cinnabar',
       scientific: 'Tyria jacobaeae'
     },
     features: {
+      rating: 3,
       origin: 'Europe',
       size: 'Small'
     },
     link: 'https://en.wikipedia.org/wiki/Cinnabar_moth',
     image: '/assets/cinnabar.jpg',
-    review: 'The Cinnabar caterpillar, while having arguably the best name as far as caterpillars go, is an awful critter. One star.',
+    review: 'The Cinnabar caterpillar, while having arguably the best names as far as caterpillars go, is an awful critter. One star.',
     date: '5/1/2017'
   }
 
-}
+]
 
 module.exports = caterpillarData;
