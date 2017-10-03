@@ -1,9 +1,9 @@
 const caterpillarData = [
 
   {
+    i: 1,
     names: {
       common: 'saddleback',
-      proper: 'Saddleback',
       scientific: 'Acharia stimulea'
     },
     features: {
@@ -18,9 +18,9 @@ const caterpillarData = [
   },
 
   {
+    id: 2,
     names: {
       common: 'flambeau',
-      proper: 'Flambeau',
       scientific: 'Dryas iulia'
     },
     features: {
@@ -35,9 +35,9 @@ const caterpillarData = [
   },
 
   {
+    id: 3,
     names: {
       common: 'swordgrass',
-      proper: 'Swordgrass',
       scientific: 'Xylena exsoleta'
     },
     features: {
@@ -52,9 +52,9 @@ const caterpillarData = [
   },
 
   {
+    i: 4,
     names: {
       common: 'cinnabar',
-      proper: 'Cinnabar',
       scientific: 'Tyria jacobaeae'
     },
     features: {

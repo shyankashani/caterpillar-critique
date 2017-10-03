@@ -1,7 +1,6 @@
-'use strict';
+"use strict";
 
-const React = require('react');
-const PropTypes = require('prop-types');
+const React = require("react");
 
 class Header extends React.Component {
   render() {

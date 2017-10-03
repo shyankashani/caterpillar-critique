@@ -2,14 +2,12 @@
 
 const React = require('react');
 const Header = require('./header.js');
-const Navigation = require('./navigation');
 const Rating = require('./rating');
 
-class Saddleback extends React.Component {
+class Review extends React.Component {
   render() {
     return (
       <div className="p24 p72-mm wmax960 mx-auto">
-
         <Header />
 
         <div className="flex-parent-mm">
@@ -32,19 +30,22 @@ class Saddleback extends React.Component {
                 {this.props.caterpillar.names.common}
               </div>
               <div className="ml24 inline-block txt-em txt-bold txt-m color-gray ">
-                {this.props.caterpillar.scientific}
+                {this.props.caterpillar.names.scientific}
               </div>
             </h2>
 
             <div className="wmax480">
-              <img src={this.props.caterpillar.image} alt={`The ${this.props.caterpillar.names.common} caterpillar`} />
+              <img
+                src={this.props.caterpillar.image}
+                alt={`The ${this.props.caterpillar.names.common} caterpillar`}
+              />
             </div>
 
             <div className="my24">
-              <Rating score={this.props.caterpillar.features.rating} size={'l'} />
+              <Rating score={this.props.caterpillar.features.rating} />
             </div>
 
-            <p className="mb12 prose">
+            <p className="mb12">
               {this.props.caterpillar.review}
             </p>
 
@@ -65,7 +66,6 @@ class Saddleback extends React.Component {
                 Learn more on Wikipedia
               </div>
             </a>
-
           </div>
         </div>
       </div>
@@ -73,4 +73,4 @@ class Saddleback extends React.Component {
   }
 }
 
-module.exports = Saddleback;
+module.exports = Review;
