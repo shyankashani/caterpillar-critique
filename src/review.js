@@ -30,7 +30,7 @@ class Review extends React.Component {
                 {this.props.caterpillar.names.common}
               </div>
               <div className="ml24 inline-block txt-em txt-bold txt-m color-gray ">
-                {this.props.caterpillar.scientific}
+                {this.props.caterpillar.names.scientific}
               </div>
             </h2>
 
