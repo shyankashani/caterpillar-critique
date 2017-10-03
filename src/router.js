@@ -1,21 +1,19 @@
-'use strict';
+"use strict";
 
-const React = require('react');
-const nanorouter = require('nanorouter');
-const nanohref = require('nanohref');
-const caterpillars = require('../data/testData0');
+const React = require("react");
+const nanorouter = require("nanorouter");
+const nanohref = require("nanohref");
+const caterpillars = require("../data/testData0");
 
-const routes = []
+const routes = [];
 for (let i = 0; i < caterpillars.length; i++) {
-  routes.push(
-    {
-      path: `/${caterpillars[i].names.common.replace(/\s/g,'')}/`,
-      page: require('./review'),
-      index: i
-    }
-  );
+  routes.push({
+    path: `/${caterpillars[i].names.common.replace(/\s/g, "")}/`,
+    page: require("./review"),
+    index: i
+  });
 }
-routes.push({ path: '/', page: require('./home'), index: caterpillars.length });
+routes.push({ path: "/", page: require("./home"), index: caterpillars.length });
 
 function isRoute(path) {
   return routes.some(route => route.path === path);
@@ -34,10 +32,11 @@ class Router extends React.Component {
   componentDidMount() {
     routes.forEach(route => {
       router.on(route.path, () => {
-        this.setState(() =>
-          route.path === '/'
-          ? { page: <route.page caterpillars={caterpillars} /> }
-          : { page: <route.page caterpillar={caterpillars[route.index]} /> }
+        this.setState(
+          () =>
+            route.path === "/"
+              ? { page: <route.page caterpillars={caterpillars} /> }
+              : { page: <route.page caterpillar={caterpillars[route.index]} /> }
         );
       });
     });

@@ -1,12 +1,10 @@
-'use strict';
+"use strict";
 
-const React = require('react');
-const ReactDOM = require('react-dom');
-const PropTypes = require('prop-types');
-const Checkbox = require('./checkbox');
+const React = require("react");
+const ReactDOM = require("react-dom");
+const Checkbox = require("./checkbox");
 
 class Feature extends React.Component {
-
   render() {
     const checkboxes = [];
     for (let i = 0; i < this.props.values.length; i++) {

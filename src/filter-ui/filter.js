@@ -1,18 +1,17 @@
-'use strict';
+"use strict";
 
-const React = require('react');
-const ReactDOM = require('react-dom');
-const PropTypes = require('prop-types');
-const Feature = require('./feature');
+const React = require("react");
+const ReactDOM = require("react-dom");
+const Feature = require("./feature");
 
 class Filter extends React.Component {
-
   handleSearch(e) {
-    this.props.search(e.target.value)
+    this.props.search(e.target.value);
   }
 
   render() {
-    const features = []; let i = 0;
+    const features = [];
+    let i = 0;
     for (let feature in this.props.features) {
       features.push(
         <Feature

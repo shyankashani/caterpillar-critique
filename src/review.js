@@ -9,6 +9,7 @@ class Review extends React.Component {
     return (
       <div className="p24 p72-mm wmax960 mx-auto">
         <Header />
+
         <div className="flex-parent-mm">
           <div className="flex-child-mm flex-child--no-shrink-mm">
             <a href="/" className="link link--gray txt-s txt-bold txt-uppercase">
@@ -22,6 +23,7 @@ class Review extends React.Component {
               </div>
             </a>
           </div>
+
           <div className="flex-child-mm flex-child--grow-mm">
             <h2 className="mb36">
               <div className="txt-h2 txt-bold inline-block txt-capitalize-first">
@@ -31,19 +33,30 @@ class Review extends React.Component {
                 {this.props.caterpillar.scientific}
               </div>
             </h2>
+
             <div className="wmax480">
-              <img src={this.props.caterpillar.image} alt={`The ${this.props.caterpillar.names.common} caterpillar`} />
+              <img
+                src={this.props.caterpillar.image}
+                alt={`The ${this.props.caterpillar.names.common} caterpillar`}
+              />
             </div>
+
             <div className="my24">
-              <Rating score={this.props.caterpillar.features.rating} size={'l'} />
+              <Rating score={this.props.caterpillar.features.rating} />
             </div>
-            <p className="mb12 prose">
+
+            <p className="mb12">
               {this.props.caterpillar.review}
             </p>
+
             <div className="txt-em txt-s color-gray">
               Reviewed {this.props.caterpillar.date}
             </div>
-            <a href={this.props.caterpillar.link} className="link flex-parent flex-parent--center-cross mt24" >
+
+            <a
+              href={this.props.caterpillar.link}
+              className="link flex-parent flex-parent--center-cross mt24"
+            >
               <div className="flex-child">
                 <svg className="icon mr6" role="presentation">
                   <use xlinkHref="#icon-book" />
