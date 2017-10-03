@@ -3,25 +3,26 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const PropTypes = require('prop-types');
-const Filter = require('./filter');
+const Feature = require('./feature');
 
-class Sidebar extends React.Component {
+class Filter extends React.Component {
 
   handleSearch(e) {
-    this.props.searchCriteria(e.target.value)
+    this.props.search(e.target.value)
   }
 
   render() {
-
-    let i = 0;
-    const filters = Object.keys(this.props.features).map(feature =>
-      <Filter
-        key={i++}
-        name={feature}
-        values={this.props.features[feature]}
-        toggleCriteria={this.props.toggleCriteria}
-      />
-    );
+    const features = []; let i = 0;
+    for (let feature in this.props.features) {
+      features.push(
+        <Feature
+          feature={feature}
+          values={Array.from(this.props.features[feature])}
+          toggleCriteria={this.props.toggleCriteria}
+          key={i++}
+        />
+      );
+    }
 
     return (
       <div className="w120-mm pr24-mm mr36-mm mb24 pb72-mm">
@@ -29,16 +30,16 @@ class Sidebar extends React.Component {
           <input
             type="search"
             className="input input--s txt-s txt-bold pl0 border--0 txt-uppercase"
-            placeholder="Search Name"
+            placeholder="Search name"
             onChange={this.handleSearch.bind(this)}
           />
         </div>
         <div>
-          {filters}
+          {features}
         </div>
       </div>
     );
   }
 }
 
-module.exports = Sidebar;
+module.exports = Filter;
