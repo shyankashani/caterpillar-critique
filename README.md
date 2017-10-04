@@ -85,7 +85,7 @@ Implement, revisiting 1 through 3 as needed.
 
 ### Component structure mock-up
 
-Below is a mock-up corresponding to the component structure implemented in on the site.
+Below is a mock-up corresponding to the component structure implemented on the site.
 
 ![Caterpillar critique mockup](assets/mockup.png)
 
