@@ -43,6 +43,9 @@ The following ground rules will help you scope your work:
 
 If you have any questions or concerns, please do not hesitate to contact us!
 
+
+___
+
 ## Approach
 
 ### 1. Familiarize
@@ -83,12 +86,17 @@ Implement, revisiting 1 through 3 as needed.
 
 ## References
 
+### Component structure mock-up
+
+Below is a mock-up corresponding to the component structure implemented on the site.
+
+![Caterpillar critique mockup](assets/mockup.png)
+
 ### Data structure
 
-Below is an example of the JSON data structure for testing and validation. It is an array of any number of objects, each representing the data for a single caterpillar review. The **features*property is customizable –  the filter will dynamically conform to its shape. You can have any number of features by which to categorize the caterpillars, and those features can have any number of values.
+Below is an example of the JSON data structure for testing and validation. It is an array of any number of objects, each representing the data for a single caterpillar review. The ```features``` property is customizable –  the filter will dynamically conform to its shape. You can have any number of features by which to categorize the caterpillars, and those features can have any number of values.
 
 ```js
-// Example JSON
 [
   {
   "id":1,
