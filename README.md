@@ -59,10 +59,10 @@ Establish assumptions about how the site is expected to behave, and outline deli
 | Assumptions | Tasks |
 | - | - |
 |Number of reviews will grow.| - Isolate review data into separate data structure to simulate scale. <br> - Generate mock data at various scales for validation. <br> - Replace hard-coded routing with dynamic routing.  |
-|Sidebar navigation list will become too long.| - Remove navigation list from sidebar. |
+|Sidebar navigation list will be too long.| - Remove navigation list from sidebar. |
 |Filter UI should be implemented in sidebar.| - Mock up filter UI to establish sidebar component structure. <br> - Write methods needed for searching by caterpillar name. <br> - Write methods needed to toggle filter criteria by feature.  |
 |Users should see a long list of caterpillars.| - Replace home page body with dynamic list of caterpillars. <br> - Mock up list UI to establish component structure. |
-|Users should be able to narrow down list.| - Correspond list to state on parent shared with  filter. |
+|Users should be able to narrow down list.| - Correspond list to state on parent shared with filter UI. |
 
 ### 3. Establish guidelines
 
