@@ -43,6 +43,9 @@ The following ground rules will help you scope your work:
 
 If you have any questions or concerns, please do not hesitate to contact us!
 
+
+___
+
 ## Approach
 
 ### 1. Familiarize
