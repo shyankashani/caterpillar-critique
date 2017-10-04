@@ -42,3 +42,69 @@ The following ground rules will help you scope your work:
 - However, you are also free to refactor any code that you think should be refactored.
 
 If you have any questions or concerns, please do not hesitate to contact us!
+
+## Approach
+
+### 1. Familiarize
+
+Add two more caterpillar reviews for familiarization with codebase.
+
+### 2. Scope
+
+Dissect needs to scope out assignment and break out individual tasks.
+
+Establish assumptions about how the site is expected to behave, and outline deliverable tasks corresponding to these assumptions.
+
+
+| Assumptions | Tasks |
+| - | - |
+|Number of reviews will grow.| - Isolate review data into separate data structure to simulate scale. <br> - Generate mock data at various scales for validation. <br> - Replace hard-coded routing with dynamic routing.  |
+|Sidebar navigation list will be too long.| - Remove navigation list from sidebar. |
+|Filter UI should be implemented in sidebar.| - Mock up filter UI to establish sidebar component structure. <br> - Write methods needed for searching by caterpillar name. <br> - Write methods needed to toggle filter criteria by feature.  |
+|Users should see a long list of caterpillars.| - Replace home page body with dynamic list of caterpillars. <br> - Mock up list UI to establish component structure. |
+|Users should be able to narrow down list.| - Correspond list to state on parent shared with filter UI. |
+
+### 3. Establish guidelines
+
+From explicit ground-rules and conventions in the codebase, establish guidelines for the project.
+
+For example:
+
+ - [x] No new dependencies.
+ - [x] Use Assembly for CSS and Icons.
+ - [x] Mobile-first.
+ - [x] Generate indeterminate components in an array outside of DOM structure.
+ - [x] Use numeric key for an ```i``` number of indeterminate child components.
+
+### 4. Implement
+
+Implement, revisiting 1 through 3 as needed.
+
+
+## References
+
+### Data structure
+
+Below is an example of the JSON data structure for testing and validation. It is an array of any number of objects, each representing the data for a single caterpillar review. The **features*property is customizable –  the filter will dynamically conform to its shape. You can have any number of features by which to categorize the caterpillars, and those features can have any number of values.
+
+```js
+// Example JSON
+[
+  {
+  "id":1,
+  "names": {
+      "common": "Ring-tailed possum",
+      "scientific": "Pseudocheirus peregrinus"
+    },
+    "features": {
+      "rating":2,
+      "size":"Small",
+      "color":"Blue",
+      "appetite":"Average"
+    },
+    "link":"https://en.wikipedia.org/wiki/Common_ringtail_possum",
+    "review":"Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+    "date":"02/24/2017"
+  }
+]
+```
