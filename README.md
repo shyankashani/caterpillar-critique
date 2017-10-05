@@ -88,9 +88,15 @@ Implement, revisiting 1 through 3 as needed.
 
 ### Component structure mock-up
 
-Below is a mock-up corresponding to the component structure implemented on the site.
+Below are mock-ups corresponding to the component structure implemented on the site.
 
-![Caterpillar critique mockup](assets/mockup.png)
+<img align="left" src="assets/mockup.png" width="620">
+<img align="right" float="right" src="assets/mockup-mobile.png" width="161">
+
+```
+```
+```
+```
 
 ### Data structure
 
@@ -115,4 +121,11 @@ Below is an example of the JSON data structure for testing and validation. It is
     "date":"02/24/2017"
   }
 ]
+```
+
+### Changing data source
+
+```js
+// router.js
+const caterpillars = require("../data/source/example");
 ```
