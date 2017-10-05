@@ -88,11 +88,9 @@ Implement, revisiting 1 through 3 as needed.
 
 ### Component structure mock-up
 
-Below are mock-ups corresponding to the component structure implemented on the site.
+Below is a mock-up corresponding to the component structure implemented on the site.
 
-<img align="left" src="assets/mockup.png" width="700">
-<img align="right" float="right" src="assets/mockup-mobile.png" width="180">
-
+![Caterpillar critique mockup](assets/mockup.png)
 
 ### Data structure
 
