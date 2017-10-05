@@ -1,7 +1,7 @@
 const caterpillarData = [
 
   {
-    i: 1,
+    id: 1,
     names: {
       common: 'saddleback',
       scientific: 'Acharia stimulea'
@@ -52,7 +52,7 @@ const caterpillarData = [
   },
 
   {
-    i: 4,
+    id: 4,
     names: {
       common: 'cinnabar',
       scientific: 'Tyria jacobaeae'

@@ -101,18 +101,25 @@ Below is an example of the JSON data structure for testing and validation. It is
   {
   "id":1,
   "names": {
-      "common": "Ring-tailed possum",
-      "scientific": "Pseudocheirus peregrinus"
+      "common": "saddleback",
+      "scientific": "Acharia stimulea"
     },
     "features": {
-      "rating":2,
+      "rating":1,
       "size":"Small",
-      "color":"Blue",
+      "color":"Green",
       "appetite":"Average"
     },
-    "link":"https://en.wikipedia.org/wiki/Common_ringtail_possum",
-    "review":"Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
-    "date":"02/24/2017"
+    "link":"https://en.wikipedia.org/wiki/Saddleback_caterpillar",
+    "review":"The Saddleback displays a wonderful range of colors and textures, all of them appealing. Although the moth is native to eastern North America, it has a distinctively southwestern vibe. The design on this caterpillar back would make a beautiful bedspread. I long to ride this caterpillar in a parade.",
+    "date":"5/1/2017"
   }
 ]
+```
+
+To update data source:
+
+```js
+// router.js
+const caterpillars = require("../data/source/example");
 ```
