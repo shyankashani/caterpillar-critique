@@ -91,12 +91,8 @@ Implement, revisiting 1 through 3 as needed.
 Below are mock-ups corresponding to the component structure implemented on the site.
 
 <img align="left" src="assets/mockup.png" width="700">
-<img align="right" float="right" src="assets/mockup-mobile.png" width="185">
+<img align="right" float="right" src="assets/mockup-mobile.png" width="180">
 
-```
-```
-```
-```
 
 ### Data structure
 
